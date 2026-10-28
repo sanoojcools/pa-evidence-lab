@@ -1,0 +1,3 @@
+# repro.py uses the Python standard library only.
+# This pin is the test runner. CI installs this file and then runs repro.py and pytest.
+pytest==8.3.5

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>People Analytics Evidence Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="banner">
+    <p class="eyebrow">People Analytics Evidence Lab</p>
+    <h1>Two papers. One recomputed number. One blocked stop.</h1>
+    <p class="lede">Beat the trivial baseline before claiming a win. Every number is either system-verified, meaning this repository computed it, or estimated/reported, meaning it was taken from a paper or the approved packet.</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="sackett-heading">
+      <h2 id="sackett-heading">Sackett et al. 2022, structured interviews</h2>
+      <p class="status status-ok">Headline status: reproduced at two decimals</p>
+      <p>Operational validity of structured employment interviews. Conditions: McDaniel et al. (1994), N = 3,069, observed r = 0.28, and Huffcutt et al. (2014), N = 4,795, observed r = 0.35, each corrected for criterion reliability 0.60 and combined by sample size. The printed U ratios are not applied. Seed 20221013.</p>
+      <div class="table-wrap">
+      <table>
+        <caption>Sackett structured-interview recomputation</caption>
+        <thead>
+          <tr>
+            <th scope="col">Quantity</th>
+            <th scope="col">Number</th>
+            <th scope="col">Label</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Paper operational validity</th>
+            <td>0.42</td>
+            <td>estimated/reported</td>
+          </tr>
+          <tr>
+            <th scope="row">Recomputed operational validity</th>
+            <td>0.416580</td>
+            <td>system-verified</td>
+          </tr>
+          <tr>
+            <th scope="row">Same value at two decimals</th>
+            <td>0.42</td>
+            <td>system-verified</td>
+          </tr>
+          <tr>
+            <th scope="row">Delta, ours minus 0.42</th>
+            <td>-0.003420</td>
+            <td>system-verified</td>
+          </tr>
+          <tr>
+            <th scope="row">Trivial baseline, N-weighted observed r</th>
+            <td>0.322682</td>
+            <td>system-verified</td>
+          </tr>
+          <tr>
+            <th scope="row">McDaniel reliability cell, recomputed</th>
+            <td>0.361478</td>
+            <td>system-verified. did not reproduce against the paper's 0.37</td>
+          </tr>
+          <tr>
+            <th scope="row">Huffcutt partial range-restriction blend</th>
+            <td>UNKNOWN</td>
+            <td>predictive-study r and N are not in the paper</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <p>The recomputed value is higher than the observed baseline because each correlation is divided by the square root of 0.60. That is the reliability correction. It is not a range-restriction win, and it is not a claim beyond these two meta-analytic means.</p>
+    </section>
+
+    <section aria-labelledby="wilson-heading">
+      <h2 id="wilson-heading">Wilson and Caliskan 2024</h2>
+      <p class="status status-blocked">Status: BLOCKED at Step 0</p>
+      <p>No reproduction was attempted. The released repository <code>kyrawilson/Resume-Screening-Bias</code> does not include resumes or name lists. <code>data/names/</code> and <code>data/=names/</code> hold 1-byte placeholder files. No model, occupation, or sample size is claimed.</p>
+      <div class="table-wrap">
+      <table>
+        <caption>Wilson and Caliskan, blocked at Step 0</caption>
+        <thead>
+          <tr>
+            <th scope="col">Item</th>
+            <th scope="col">What is on the record</th>
+            <th scope="col">Label</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Experiment status</th>
+            <td>BLOCKED at Step 0</td>
+            <td>FACT, rechecked 28 Oct 2026. No system-verified rate</td>
+          </tr>
+          <tr>
+            <th scope="row">Packet target, White-vs-Black preference</th>
+            <td>about 85%</td>
+            <td>estimated/reported from the packet. Not computed</td>
+          </tr>
+          <tr>
+            <th scope="row">Packet no-preference baseline</th>
+            <td>50%</td>
+            <td>estimated/reported from the packet. Not computed</td>
+          </tr>
+          <tr>
+            <th scope="row">OSF names files, 28 Oct 2026</th>
+            <td>Names.csv (4,466 bytes) and =Names.csv (4,370 bytes) are listed. Contents were not downloaded</td>
+            <td>FACT. The 17 Oct 2026 check could not list this project</td>
+          </tr>
+          <tr>
+            <th scope="row">Kaggle download requirement today</th>
+            <td>UNKNOWN</td>
+            <td>Unauthenticated pages returned HTTP 200. No download was attempted</td>
+          </tr>
+          <tr>
+            <th scope="row">README note</th>
+            <td>Update August 29, 2026: gender-only results should be inverted; race-only and intersectional results were replicated</td>
+            <td>FACT that the README says this. The bug was not re-checked</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Approval WE-PAEL-2026-10-13-APPROVED. Source write-ups: <code>experiments/sackett2022/RESULT.md</code> and <code>experiments/wilson_caliskan2024/RESULT.md</code>.</p>
+  </footer>
+</body>
+</html>
