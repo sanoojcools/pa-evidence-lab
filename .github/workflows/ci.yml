@@ -1,0 +1,21 @@
+name: Sackett reproduction
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  repro:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install pinned test runner
+        run: python -m pip install -r experiments/sackett2022/requirements.txt
+      - name: Recompute structured-interview validity
+        run: python experiments/sackett2022/repro.py
+      - name: Run reproduction tests and blocked-write-up checks
+        run: python -m pytest experiments/sackett2022 experiments/wilson_caliskan2024 -q
